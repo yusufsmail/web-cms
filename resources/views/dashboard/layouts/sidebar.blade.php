@@ -9,13 +9,13 @@
           </li>
           <hr>
           <li class="nav-item">
-            <a class="nav-link {{Request::is('dashboard/posts*')? 'active' : ''}}" aria-current="page" href="/dashboard">
+            <a class="nav-link {{Request::is('dashboard')? 'active' : ''}}" aria-current="page" href="/dashboard">
               <span data-feather="airplay" class="align-text-bottom"></span>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{Request::is('posts')? 'active' : ''}}" href="/dashboard/posts">
+            <a class="nav-link {{Request::is('dashboard/posts')? 'active' : ''}}" href="/dashboard/posts">
               <span data-feather="file-text" class="align-text-bottom"></span>
               My Posts
             </a>

@@ -1,5 +1,5 @@
 @extends('header')
-@section('content')
+@section('container')
     <div class="container-fluid p-0">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -235,5 +235,16 @@
     <!-- Team End -->
 
     <!-- Blog End -->
-    
+    <div class="container-fluid bg-primary text-secondary p-5">
+        <div class="row g-5">
+            <div class="col-12 text-center">
+                <h1 class="display-5 mb-4"></h1>
+                <form class="mx-auto" style="max-width: 600px;">
+                    <div class="navbar-nav ms-auto py-0 me-n3">
+                        <button class="btn btn-dark px-4"><a href="/post">Next</a></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 @endsection

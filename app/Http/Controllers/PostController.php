@@ -15,7 +15,14 @@ class PostController extends Controller
         ]);
     }
 
-
+    public function selengkapnya($category, $post){
+        // die('test'.$category. 'post'.$post);
+        $detailpost = Post::where('slug', $post)
+                ->first();
+                return view('content', [
+                    'post' => $detailpost
+                ]);
+    }
 
 
     // public function show(Post $post)

@@ -5,7 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\CategoryController;
+// use App\Http\Controllers\CategoryController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Models\Category;
 
@@ -26,7 +26,7 @@ Route::get('/', function () {
 
 Route::get('/post', [PostController::class ,'index' ]);
 // Route::get('/post', [PostController::class ,'show' ]);
-
+Route::get('/content/{category}/{post}', [PostController::class, 'selengkapnya'])->name('selengkapnya');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -61,3 +61,13 @@ Route::get('/categories/{category:slug}', function(Category $category){
         'category' => $category ->name
     ]);
 });
+
+
+
+// Route::get('/content/{category:slug}/{{post:slug}}', function(Post $post){
+//     return view ('', [
+//         'title' => $post ->name,
+//         'category' => $post ->category,
+//         'posts' => $post ->name
+//     ]);
+// });

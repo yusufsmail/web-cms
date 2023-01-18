@@ -1,5 +1,5 @@
 @extends('header')
-@section('content')
+@section('container')
 <br>
 <br>
 

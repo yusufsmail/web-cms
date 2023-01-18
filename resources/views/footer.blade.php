@@ -1,15 +1,4 @@
-<div class="container-fluid bg-primary text-secondary p-5">
-        <div class="row g-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 mb-4"></h1>
-                <form class="mx-auto" style="max-width: 600px;">
-                    <div class="navbar-nav ms-auto py-0 me-n3">
-                        <button class="btn btn-dark px-4"><a href="/service">Next</a></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+
     <div class="container-fluid bg-dark text-secondary p-5">
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">

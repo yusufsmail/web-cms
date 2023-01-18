@@ -30,7 +30,6 @@
 </head>
 @include('navbar')
 @yield('container')
-@yield('content')
 @include('footer')
 
 

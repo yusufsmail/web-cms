@@ -20,7 +20,7 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-    protected $fillable = ['title', 'slug', 'excerpt', 'body', 'category_id', 'user_id'];
+    protected $fillable = ['title', 'slug', 'excerpt', 'body', 'image', 'category_id', 'user_id'];
 
     public function getRouteKeyName()
     {
