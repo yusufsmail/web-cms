@@ -55,7 +55,7 @@
                 
             <h1>{{ $w->title}}</h1>
            
-            <p>By {{$w->user->name}} in <a href="/categories/{{$w->category->slug}}">{{$w->category->name}}</a> </p>
+            <p>By {{$w->user->name}} in <a href="/categories/{{$w->category->slug}}">{{$w->category->name}}</a> </p>v
             <p class="mb-4">{{$w->excerpt}} <br> <a href="/content/{{$w->category->slug}}/{{$w->slug}}">selengkapnya...</a></p>
             
             </div>

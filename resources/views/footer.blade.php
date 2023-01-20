@@ -16,6 +16,12 @@
                     <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.instagram.com/telkomindonesia/"><i class="fab fa-instagram fw-normal"></i></a>
                 </div>
             </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Join Us</h3>
+                <div class="d-flex">
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="/lamaran"><i class="bi bi-people-fill"></i></a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">

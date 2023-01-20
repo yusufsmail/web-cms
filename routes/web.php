@@ -1,13 +1,16 @@
 <?php
 
+use App\Http\Controllers\AdminCategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\PostController;
-// use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LamaranController;
+use App\Http\Controllers\CategoryController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Models\Category;
+use App\Models\Lamaran;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +26,9 @@ use App\Models\Category;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/lamaran', [LamaranController::class ,'index' ]);
+Route::post('/lamaran', [LamaranController::class ,'store' ]);
 
 Route::get('/post', [PostController::class ,'index' ]);
 // Route::get('/post', [PostController::class ,'show' ]);
@@ -61,6 +67,13 @@ Route::get('/categories/{category:slug}', function(Category $category){
         'category' => $category ->name
     ]);
 });
+
+Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')
+->middleware('admin');
+
+Route::get('/dashboard/lamaran/detail/{lamaran}', [LamaranController::class, 'detail'])->name('detail_lamaran');
+Route::resource('/dashboard/lamaran', LamaranController::class)->middleware('admin');
+
 
 
 
